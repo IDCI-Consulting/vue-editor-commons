@@ -1,5 +1,3 @@
-import $ from 'jquery';
-
 /**
  * Remove all lines breaks and "extra" spaces, when there are more than 1 spaces in a row
  *
@@ -179,73 +177,11 @@ function createBootstrapModal (id, name, extraClasses, title, body, modalFooter)
     ;
 }
 
-/**
- * Add some colors on empty required inputs
- *
- * @param elementId - the if of the element wrapping the inputs
- * @param parentClass - the class of the parent of the required input, in case we don't want to select every inputs
- */
-function colorEmptyRequiredInputs (elementId, parentClass) {
-  var inputSelector = '.' + parentClass + ' input[required="required"]';
-
-  /**
-   * Color in red when empty, in white when filled
-   *
-   * @param $input
-   */
-  function color($input) {
-    if ($input.val()) {
-      $input.css({
-        'border-color': '#cccccc',
-        'background-color': '#ffffff'
-      });
-    } else {
-      $input.css({
-        'border-color': '#c9302c',
-        'background-color': '#f3d9d9'
-      });
-    }
-  }
-
-  // Color on change when the input is empty
-  $(document).on('change', inputSelector, function () {
-    color($(this));
-  });
-
-  // Color when new children are added to the dom
-  // Sometimes they are added but already filled by vuejs, sometimes they are empty
-  var target = document.getElementById(elementId);
-  var config = {
-    childList: true,
-    characterData: true,
-    subtree: true
-  };
-
-  var observer = new MutationObserver(function (mutations) {
-    mutations.forEach(function (mutation) {
-      var $inputs = [];
-
-      if ($(mutation.target).hasClass(parentClass)) {
-        $inputs = $(mutation.target).find('input[required="required"]');
-      } else {
-        $inputs = $(mutation.target).find(inputSelector);
-      }
-
-      $inputs.each(function () {
-        color($(this));
-      });
-    });
-  });
-
-  observer.observe(target, config);
-}
-
 export {
   filterObject,
   sortObject,
   generateUniqueId,
   hashCode,
   createBootstrapModal,
-  colorEmptyRequiredInputs,
   createAttributeMapObject
 };

@@ -10,9 +10,6 @@ module.exports = {
     library: 'vue-editor-commons',
     libraryTarget: 'umd'
   },
-  externals: {
-    jquery: 'jQuery'
-  },
   module: {
     rules: [
       {
