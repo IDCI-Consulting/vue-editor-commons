@@ -1,0 +1,20 @@
+{
+  "name": "vue-editor-commons",
+  "version": "1.0.0",
+  "description": "Common components for editors written with Vuejs",
+  "main": "index.js",
+  "repository": "https://github.com/IDCI-Consulting/vue-editor-commons.git",
+  "devDependencies": {
+    "css-loader": "^0.28.4",
+    "style-loader": "^0.18.2",
+    "vue-loader": "^13.0.0",
+    "vue-template-compiler": "^2.3.4",
+    "webpack": "^3.0.0"
+  },
+  "scripts": {
+    "build": "webpack --watch",
+    "build-prod": "NODE_ENV=production webpack"
+  },
+  "author": "Baptiste Bouchereau",
+  "license": "MIT"
+}

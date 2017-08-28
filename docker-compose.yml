@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+
+  node:
+    image: idci/node:8.4.0-stretch
+    build:
+      context: ./.docker/build/node
+    volumes:
+      - ./:/usr/src/app/
