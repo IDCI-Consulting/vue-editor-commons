@@ -18,7 +18,7 @@
 
 </template>
 
-<script
+<script>
 
 import jsonOptionMixin from '../../mixins/jsonOption.vue';
 
