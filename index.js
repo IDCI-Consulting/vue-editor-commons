@@ -380,7 +380,7 @@ if (false) {(function () {
 
       // Save the raw json
 
-      localStorage.setItem(Object(__WEBPACK_IMPORTED_MODULE_0__utils__["a" /* hashCode */])(jsonLine), twigOperationArray);
+      localStorage.setItem(Object(__WEBPACK_IMPORTED_MODULE_0__utils__["e" /* hashCode */])(jsonLine), twigOperationArray);
 
       return jsonLine;
     }
@@ -445,8 +445,8 @@ if (false) {(function () {
       var jsonLine = twigOperationsArray.substring(1, twigOperationsArray.length - 1);
 
       // Retrieve the saved raw json
-      if (localStorage.getItem(Object(__WEBPACK_IMPORTED_MODULE_0__utils__["a" /* hashCode */])(jsonLine)) !== null) {
-        return localStorage.getItem(Object(__WEBPACK_IMPORTED_MODULE_0__utils__["a" /* hashCode */])(jsonLine));
+      if (localStorage.getItem(Object(__WEBPACK_IMPORTED_MODULE_0__utils__["e" /* hashCode */])(jsonLine)) !== null) {
+        return localStorage.getItem(Object(__WEBPACK_IMPORTED_MODULE_0__utils__["e" /* hashCode */])(jsonLine));
       }
 
       return jsonLine
@@ -467,12 +467,12 @@ if (false) {(function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* unused harmony export filterObject */
-/* unused harmony export sortObject */
-/* unused harmony export generateUniqueId */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return hashCode; });
-/* unused harmony export createBootstrapModal */
-/* unused harmony export createAttributeMapObject */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return filterObject; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return sortObject; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return generateUniqueId; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return hashCode; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return createBootstrapModal; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return createAttributeMapObject; });
 /**
  * Remove all lines breaks and "extra" spaces, when there are more than 1 spaces in a row
  *
@@ -661,6 +661,7 @@ function createBootstrapModal (id, name, extraClasses, title, body, modalFooter)
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "utils", function() { return utils; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_options_checkbox_vue__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_options_choice_vue__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_options_integer_vue__ = __webpack_require__(14);
@@ -688,6 +689,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "jsonOptionMixin", function() { return __WEBPACK_IMPORTED_MODULE_8__mixins_jsonOption_vue__["a"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "optionMixin", function() { return __WEBPACK_IMPORTED_MODULE_9__mixins_option_vue__["a"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "waitForItMixin", function() { return __WEBPACK_IMPORTED_MODULE_10__mixins_waitForIt_vue__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "actions", function() { return __WEBPACK_IMPORTED_MODULE_11__store_actions_js__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "getters", function() { return __WEBPACK_IMPORTED_MODULE_12__store_getters_js__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "mutations", function() { return __WEBPACK_IMPORTED_MODULE_13__store_mutations_js__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "JsonToTwigTransformer", function() { return __WEBPACK_IMPORTED_MODULE_14__utils_JsonToTwigTransformer_js__["a"]; });
 
 
 
@@ -704,6 +709,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
+
+const utils = {
+  filterObject: __WEBPACK_IMPORTED_MODULE_15__utils_utils_js__["c" /* filterObject */],
+  sortObject: __WEBPACK_IMPORTED_MODULE_15__utils_utils_js__["f" /* sortObject */],
+  generateUniqueId: __WEBPACK_IMPORTED_MODULE_15__utils_utils_js__["d" /* generateUniqueId */],
+  hashCode: __WEBPACK_IMPORTED_MODULE_15__utils_utils_js__["e" /* hashCode */],
+  createBootstrapModal: __WEBPACK_IMPORTED_MODULE_15__utils_utils_js__["b" /* createBootstrapModal */],
+  createAttributeMapObject: __WEBPACK_IMPORTED_MODULE_15__utils_utils_js__["a" /* createAttributeMapObject */]
+}
 
 
 
@@ -1914,7 +1928,7 @@ var actions = {
 
 };
 
-/* unused harmony default export */ var _unused_webpack_default_export = (actions);
+/* harmony default export */ __webpack_exports__["a"] = (actions);
 
 
 /***/ }),
@@ -1922,7 +1936,7 @@ var actions = {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* unused harmony default export */ var _unused_webpack_default_export = ({
+/* harmony default export */ __webpack_exports__["a"] = ({
 
   editorId: function (state) {
     return state.configuration.editorId;
@@ -1942,7 +1956,7 @@ var actions = {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* unused harmony default export */ var _unused_webpack_default_export = ({
+/* harmony default export */ __webpack_exports__["a"] = ({
 
   cache: function (state, payload) {
     state.apiCache[payload.api_url] = payload.api_response;

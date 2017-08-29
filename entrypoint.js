@@ -13,7 +13,23 @@ import actions               from './store/actions.js';
 import getters               from './store/getters.js';
 import mutations             from './store/mutations.js';
 import JsonToTwigTransformer from './utils/JsonToTwigTransformer.js';
-import utils                 from './utils/utils.js';
+import {
+  filterObject,
+  sortObject,
+  generateUniqueId,
+  hashCode,
+  createBootstrapModal,
+  createAttributeMapObject
+} from './utils/utils.js';
+
+const utils = {
+  filterObject,
+  sortObject,
+  generateUniqueId,
+  hashCode,
+  createBootstrapModal,
+  createAttributeMapObject
+}
 
 export {
   checkBoxComponent,
@@ -26,5 +42,10 @@ export {
   httpMixin,
   jsonOptionMixin,
   optionMixin,
-  waitForItMixin
+  waitForItMixin,
+  actions,
+  getters,
+  mutations,
+  JsonToTwigTransformer,
+  utils
 };
