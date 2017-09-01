@@ -6,13 +6,19 @@
 
 export default {
 
-  props: ['option', 'name', 'value'],
+  props: ['option', 'name', 'value', 'required-star'],
 
   data: function () {
     return {
       // Default value from the api
       data: this.option.options.data
     };
+  },
+
+  computed: {
+    displayRequiredStar: function () {
+      return this.option.options.required && this.requiredStar;
+    }
   },
 
   /**
