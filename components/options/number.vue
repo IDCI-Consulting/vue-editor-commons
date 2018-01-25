@@ -10,7 +10,8 @@
         :required="option.options.required"
         :value="data"
         @input="updateOption($event.target.value)"
-        type="text"
+        type="number"
+        step="any"
         :name="name"
       >
     </div>
