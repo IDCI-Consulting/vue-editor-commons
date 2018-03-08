@@ -3,17 +3,14 @@
   <div class="form-group">
     <label :for="name">{{ name }}</label>
     <span class="required-star" v-if="displayRequiredStar">*</span>
-    <div class="form-control-wrapper">
-      <span v-if="option.options.help">{{ option.options.help }}</span>
-      <select
-        class="form-control"
-        :required="option.options.required"
-        v-model="data"
-        :name="name"
-      >
-        <option :value="key" v-for="(choice, key) in option.options.choices">{{ choice }}</option>
-      </select>
-    </div>
+    <span v-if="option.options.help">{{ option.options.help }}</span>
+    <select
+          class="form-control"
+          :required="option.options.required"
+          v-model="data"
+          :name="name">
+      <option :value="key" v-for="(choice, key) in option.options.choices">{{ choice }}</option>
+    </select>
   </div>
 
 </template>
