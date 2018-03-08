@@ -16,8 +16,5 @@
     "build-prod": "NODE_ENV=production webpack"
   },
   "author": "Baptiste Bouchereau",
-  "license": "MIT",
-  "dependencies": {
-    "yarn": "^1.5.1"
-  }
+  "license": "MIT"
 }

@@ -3,9 +3,8 @@
   <div class="form-group">
     <label :for="name">
       {{ name }}
-      <i :class="classes" aria-hidden="true"></i>
+      <span class="required-star" v-if="displayRequiredStar">*</span>
     </label>
-    <span class="required-star" v-if="displayRequiredStar">*</span>
     <span v-if="option.options.help">{{ option.options.help }}</span>
     <input class="form-control"
            :required="option.options.required"
