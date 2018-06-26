@@ -11,6 +11,7 @@
           :required="option.options.required"
           v-model="data"
           :name="name">
+      <option disabled selected value></option>
       <option :value="key" v-for="(choice, key) in option.options.choices">{{ choice }}</option>
     </select>
   </div>

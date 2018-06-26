@@ -2,7 +2,6 @@ ARG NODE_VERSION
 FROM node:8.4.0-stretch
 
 RUN apt-get update
-RUN apt-get install -y curl xvfb chromium chromium-l10n firefox-esr
 
 RUN npm install --global eslint
 
